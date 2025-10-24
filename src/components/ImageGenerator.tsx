@@ -8,7 +8,7 @@ import { Spinner } from './ui/Spinner';
 import { DownloadIcon, ArrowUpTrayIcon, XCircleIcon } from './ui/Icons';
 
 const ImageGenerator: React.FC = () => {
-  const [prompt, setPrompt] = useState<string>('A female model with blonde hair, wearing a red silk evening dress, standing in a Parisian street at night.');
+  const [prompt, setPrompt] = useState<string>('A 26 year old female Vietnamese model with black hair, sparkling brown eyes wearing a butterfly patterned midi dress, standing in a Parisian street in the afternoon.');
   const [style, setStyle] = useState<StyleOption>(STYLE_OPTIONS[0]);
   const [sizeKey, setSizeKey] = useState<string>(Object.keys(SIZE_OPTIONS)[0]);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
