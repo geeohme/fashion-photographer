@@ -1,0 +1,20 @@
+services:
+  fashion-photo:
+    build: .
+    container_name: fashion-photo  
+    restart: unless-stopped
+    networks:
+      - searxng
+    ports: 
+      - "7089:7089"
+    environment:
+      - PORT=7091  # Tell Express to listen on 7089
+      - GEMINI_API_KEY=$GEMINI_API_KEY
+      - API_KEY=$GEMINI_API_KEY
+    env_file:
+      - .env
+
+networks:
+  searxng:
+    external: true
+    name: searxng-docker_searxng
