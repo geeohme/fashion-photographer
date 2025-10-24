@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "build": "esbuild src/index.tsx --bundle --outfile=dist/index.js --loader:.ts=tsx --jsx=automatic --define:process.env.NODE_ENV='\"production\"' && cp public/index.html dist/index.html",
+    "build": "esbuild src/index.tsx --bundle --outfile=dist/index.js --loader:.tsx=tsx --loader:.ts=tsx --loader:.css=css --jsx=automatic --minify --define:process.env.NODE_ENV='\"production\"' && cp public/index.html dist/index.html"
     "dev": "npm run build && node server.js"
   },
   "dependencies": {
